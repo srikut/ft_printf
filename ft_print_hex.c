@@ -1,4 +1,6 @@
 #include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>
 
 static char	*make_index_lower(char *index)
 {
@@ -44,14 +46,19 @@ static char	*make_index_upper(char *index)
 }
 int	put_hex(int n, const char *nbr)
 {
-	while(n > 15)
-	{
-		n 
-	}
+	int		count;
+	size_t	index;
+
+	count = 0;
+	index = n % 16;
+	if (n >= 16)
+		count += put_hex(n / 16, nbr);
+	count += write(1, &nbr[index], 1);
+	return (count);
 }
 int	ft_print_hex(unsigned int n, const char *format)
 {
-	const char *nbr;
+	char *nbr;
 	size_t	index;
 
 	nbr = (char *)malloc(sizeof(char) * 16);
@@ -61,6 +68,42 @@ int	ft_print_hex(unsigned int n, const char *format)
 		nbr = make_index_lower(nbr);
 	else
 		nbr = make_index_upper(nbr);
+	return (put_hex(n, nbr));
+}
 
 
+#include <unistd.h> // write()のため
+#include <stdlib.h> // malloc()のため
+#include <stdio.h>  // printf()などのため
+
+// ここに先ほどの関数群を貼り付けてもOKですが、
+// すでに別ファイルで定義している場合はヘッダーを作ってincludeするのが望ましいです。
+// ひとまずテスト用としてプロトタイプ宣言だけ入れておきます。
+
+int ft_print_hex(unsigned int n, const char *format);
+
+int main(void)
+{
+    int count;
+
+    // いくつかの値でテストしてみましょう
+    // 'x' (小文字) と 'X' (大文字) 両方を試してみます
+
+    count = ft_print_hex(0, "x");
+    printf(" => 出力文字数: %d\n", count);
+
+    count = ft_print_hex(42, "x"); // 42 -> 2a
+    printf(" => 出力文字数: %d\n", count);
+
+    count = ft_print_hex(255, "x"); // 255 -> ff
+    printf(" => 出力文字数: %d\n", count);
+
+    // 大文字バージョン(X)
+    count = ft_print_hex(255, "X"); // 255 -> FF
+    printf(" => 出力文字数: %d\n", count);
+
+    count = ft_print_hex(4096, "X"); // 4096 -> 1000
+    printf(" => 出力文字数: %d\n", count);
+
+    return 0;
 }
