@@ -59,6 +59,7 @@ int	put_hex(int n, const char *nbr)
 int	ft_print_hex(unsigned int n, const char *format)
 {
 	char *nbr;
+	int	count;
 	size_t	index;
 
 	nbr = (char *)malloc(sizeof(char) * 16);
@@ -68,7 +69,9 @@ int	ft_print_hex(unsigned int n, const char *format)
 		nbr = make_index_lower(nbr);
 	else
 		nbr = make_index_upper(nbr);
-	return (put_hex(n, nbr));
+	count = put_hex(n, nbr);
+	free(nbr);
+	return (count);
 }
 
 
