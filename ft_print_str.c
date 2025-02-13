@@ -3,24 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:14:22 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/04 21:20:22 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/02/09 23:20:17 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
-int	ft_print_str(char *s)
+
+int	ft_print_str(const char *s)
 {
+	size_t	index;
 	int	count;
+	int	ret;
 
 	count = 0;
+	index = 0;
 	while(s[count])
 	{
-		write(1, &s[count], 1);
-		count++;
+		ret = 0;
+		ret = write(1, &s[index], 1);
+		index++;
+		if (ret > 0)
+			count += ret;
 	}
 	return (count);
 }

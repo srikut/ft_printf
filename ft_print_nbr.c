@@ -3,33 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 20:39:32 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/04 21:11:49 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/02/10 21:45:53 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "ft_printf.h"
 
 int	ft_print_nbr(int n)
 {
 	char	c;
 	int		count;
+	int		ret;
 
 	count = 0;
 	if (n == -2147483648)
 		return (write(1, "-2147483648", 11));
 	if (n < 0)
 	{
-		count += write(1, "-", 1);
+		ret = write(1, "-", 1);
+		if (ret > 0)
+			count += ret;
 		n = -n;
 	}
 	if (n > 9)
 		count += ft_print_nbr(n / 10);
 	c = (n % 10) + '0';
-	count += write(1, &c, 1);
+	ret = write(1, &c, 1);
+	if (ret > 0)
+		count += ret;
 	return (count);
 }
 
