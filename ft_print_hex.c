@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/13 16:51:44 by srikuto           #+#    #+#             */
+/*   Updated: 2025/02/13 17:16:20 by srikuto          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static char	*make_index_lower(char *index)
@@ -19,8 +31,9 @@ static char	*make_index_lower(char *index)
 	index[14] = 'e';
 	index[15] = 'f';
 	index[16] = '\0';
-	return(index);
+	return (index);
 }
+
 static char	*make_index_upper(char *index)
 {
 	index[0] = '0';
@@ -40,12 +53,13 @@ static char	*make_index_upper(char *index)
 	index[14] = 'E';
 	index[15] = 'F';
 	index[16] = '\0';
-	return(index);
+	return (index);
 }
+
 int	put_hex(int n, const char *nbr)
 {
 	int		count;
-	int	ret;
+	int		ret;
 	size_t	index;
 
 	count = 0;
@@ -61,24 +75,24 @@ int	put_hex(int n, const char *nbr)
 			count += ret;
 	return (count);
 }
+
 int	ft_print_hex(unsigned int n, const char format)
 {
-	char *nbr;
-	int	count;
+	char	*nbr;
+	int		count;
 
 	nbr = (char *)malloc(sizeof(char) * 16);
-	if(!nbr)
-		return(0);
-	if(format == 'x')
+	if (!nbr)
+		return (0);
+	if (format == 'x')
 		nbr = make_index_lower(nbr);
 	else
 		nbr = make_index_upper(nbr);
 	count = 0;
 	count += put_hex(n, nbr);
-	free(nbr);
+	free (nbr);
 	return (count);
 }
-
 
 // #include <unistd.h> // write()のため
 // #include <stdlib.h> // malloc()のため

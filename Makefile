@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sometani <sometani@student.42.fr>          +#+  +:+       +#+         #
+#    By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/22 17:31:07 by srikuto           #+#    #+#              #
-#    Updated: 2025/02/09 22:24:45 by sometani         ###   ########.fr        #
+#    Created: 2025/02/13 16:51:08 by srikuto           #+#    #+#              #
+#    Updated: 2025/02/13 16:51:11 by srikuto          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME    = libftprintf.a
 CC      = gcc

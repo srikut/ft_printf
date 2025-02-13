@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
+/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 19:15:23 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/10 22:57:05 by sometani         ###   ########.fr       */
+/*   Created: 2025/02/13 16:51:58 by srikuto           #+#    #+#             */
+/*   Updated: 2025/02/13 17:24:31 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,13 @@ int	print_hex_rec(uintptr_t address, const char *hex_base)
 		count += ret;
 	return (count);
 }
+
 int	ft_print_ptr(void *ptr)
 {
-	const char *hex_base = "0123456789abcdef";
-	uintptr_t address;
-	int	count;
-	int	ret;
+	const char	*hex_base = "0123456789abcdef";
+	uintptr_t	address;
+	int			count;
+	int			ret;
 
 	count = 0;
 	address = (uintptr_t)ptr;

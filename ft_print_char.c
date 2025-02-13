@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
+/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 21:11:58 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/09 23:11:40 by sometani         ###   ########.fr       */
+/*   Created: 2025/02/13 16:51:37 by srikuto           #+#    #+#             */
+/*   Updated: 2025/02/13 17:14:16 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_print_char(int n)
 {
-	int	ret;
+	int		ret;
 	char	c;
-	int	count;
+	int		count;
 
 	c = (char)n;
 	ret = write(1, &c, 1);

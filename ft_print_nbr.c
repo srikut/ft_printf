@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
+/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 20:39:32 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/10 21:45:53 by sometani         ###   ########.fr       */
+/*   Created: 2025/02/13 16:51:53 by srikuto           #+#    #+#             */
+/*   Updated: 2025/02/13 17:16:55 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,5 @@ int	ft_print_nbr(int n)
 // 	write(1, "\n", 1);
 // 	ft_print_nbr(e);
 // 	write(1, "\n", 1);
-	
 // 	return (0);
 // }

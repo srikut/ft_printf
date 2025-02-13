@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
+/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 19:15:28 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/09 23:18:34 by sometani         ###   ########.fr       */
+/*   Created: 2025/02/13 16:51:19 by srikuto           #+#    #+#             */
+/*   Updated: 2025/02/13 17:27:09 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	print_num(unsigned int n)
 {
-	int	count;
-	int	ret;
+	int		count;
+	int		ret;
 	char	c;
 
 	count = 0;
@@ -28,6 +28,7 @@ int	print_num(unsigned int n)
 		count += ret;
 	return (count);
 }
+
 int	ft_print_unsigned(unsigned int n)
 {
 	if (n < 0)
