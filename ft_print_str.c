@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:52:06 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/13 17:26:15 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/02/19 20:48:11 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_print_str(const char *s)
 	int		count;
 	int		ret;
 
+	if (s == NULL)
+		return (write(1, "(null)", 6));
 	count = 0;
 	index = 0;
 	while (s[count])
@@ -33,7 +35,7 @@ int	ft_print_str(const char *s)
 
 // int	main(void)
 // {
-// 	char *s = "hello world";
+// 	char *s = NULL;
 // 	ft_print_str(s);
 // 	return(0);
 // }

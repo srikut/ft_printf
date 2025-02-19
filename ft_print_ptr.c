@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:51:58 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/13 17:24:31 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/02/19 20:56:11 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int	ft_print_ptr(void *ptr)
 	int			count;
 	int			ret;
 
+	if (ptr == NULL)
+		return (write(1, "(nil)", 5));
 	count = 0;
 	address = (uintptr_t)ptr;
 	ret = write(1, "0", 1);

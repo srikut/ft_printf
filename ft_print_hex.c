@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:51:44 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/13 17:16:20 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/02/19 20:29:31 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,11 @@ static char	*make_index_upper(char *index)
 	return (index);
 }
 
-int	put_hex(int n, const char *nbr)
+int	put_hex(unsigned int n, const char *nbr)
 {
 	int		count;
-	int		ret;
 	size_t	index;
+	int		ret;
 
 	count = 0;
 	index = n % 16;

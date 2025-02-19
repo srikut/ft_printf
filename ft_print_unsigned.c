@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:51:19 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/13 17:27:09 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/02/19 18:07:27 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,14 @@ int	print_num(unsigned int n)
 
 int	ft_print_unsigned(unsigned int n)
 {
-	if (n < 0)
-		n = 4294967294 + n;
 	return (print_num(n));
 }
+// int	ft_print_unsigned(unsigned int n)
+// {
+// 	if (n < 0)
+// 		n = 4294967294 + n;
+// 	return (print_num(n));
+// }
 // int main(void)
 // {
 //     unsigned int num1;

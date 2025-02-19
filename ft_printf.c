@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:51:27 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/13 17:13:40 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/02/19 18:08:57 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	handle_conversion(char specifier, va_list args)
 	int	ret;
 
 	count = 0;
-	if (specifier == 'd')
+	if (specifier == 'd' || specifier == 'i')
 		count += ft_print_nbr(va_arg(args, int));
 	else if (specifier == 's')
 		count += ft_print_str(va_arg(args, char *));
