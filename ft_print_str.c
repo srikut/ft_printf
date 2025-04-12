@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:52:06 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/19 20:48:11 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/04/12 21:08:51 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,3 @@ int	ft_print_str(const char *s)
 	}
 	return (count);
 }
-
-// int	main(void)
-// {
-// 	char *s = NULL;
-// 	ft_print_str(s);
-// 	return(0);
-// }

@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:51:53 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/13 17:16:55 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/04/12 21:09:34 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,24 +36,3 @@ int	ft_print_nbr(int n)
 		count += ret;
 	return (count);
 }
-
-// int	main(void)
-// {
-// 	int	a = 0;
-// 	int	b = 512;
-// 	int	c = -512;
-// 	int	d = -2147483648;
-// 	int e = 2147483647;
-
-// 	ft_print_nbr(a);
-// 	write(1, "\n", 1);
-// 	ft_print_nbr(b);
-// 	write(1, "\n", 1);
-// 	ft_print_nbr(c);
-// 	write(1, "\n", 1);
-// 	ft_print_nbr(d);
-// 	write(1, "\n", 1);
-// 	ft_print_nbr(e);
-// 	write(1, "\n", 1);
-// 	return (0);
-// }

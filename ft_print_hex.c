@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:51:44 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/19 20:29:31 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/04/12 21:08:10 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,39 +93,3 @@ int	ft_print_hex(unsigned int n, const char format)
 	free (nbr);
 	return (count);
 }
-
-// #include <unistd.h> // write()のため
-// #include <stdlib.h> // malloc()のため
-// #include <stdio.h>  // printf()などのため
-
-// // ここに先ほどの関数群を貼り付けてもOKですが、
-// // すでに別ファイルで定義している場合はヘッダーを作ってincludeするのが望ましいです。
-// // ひとまずテスト用としてプロトタイプ宣言だけ入れておきます。
-
-// int ft_print_hex(unsigned int n, const char *format);
-
-// int main(void)
-// {
-//     int count;
-
-//     // いくつかの値でテストしてみましょう
-//     // 'x' (小文字) と 'X' (大文字) 両方を試してみます
-
-//     count = ft_print_hex(0, "x");
-//     printf(" => 出力文字数: %d\n", count);
-
-//     count = ft_print_hex(42, "x"); // 42 -> 2a
-//     printf(" => 出力文字数: %d\n", count);
-
-//     count = ft_print_hex(255, "x"); // 255 -> ff
-//     printf(" => 出力文字数: %d\n", count);
-
-//     // 大文字バージョン(X)
-//     count = ft_print_hex(255, "X"); // 255 -> FF
-//     printf(" => 出力文字数: %d\n", count);
-
-//     count = ft_print_hex(4096, "X"); // 4096 -> 1000
-//     printf(" => 出力文字数: %d\n", count);
-
-//     return 0;
-// }

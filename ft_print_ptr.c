@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 16:51:58 by srikuto           #+#    #+#             */
-/*   Updated: 2025/02/19 20:56:11 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/04/12 21:08:46 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,3 @@ int	ft_print_ptr(void *ptr)
 	count += print_hex_rec(address, hex_base);
 	return (count);
 }
-
-// int	main(void)
-// {
-// 	int		printed_chars;
-// 	int		x;
-
-// 	x = 42;
-// 	/* 変数 x のアドレスを出力 */
-// 	printed_chars = ft_print_ptr(&x);
-// 	/* 出力結果の後に改行を追加 */
-// 	write(1, "\n", 1);
-// 	printf("%d", printed_chars);
-
-// 	/* 出力した文字数を返しても良いです */
-// 	return (0);
-// }
